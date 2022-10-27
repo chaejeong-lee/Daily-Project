@@ -1,0 +1,126 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('DAILY')"></head>
+
+<body>
+
+    <nav th:replace="fragments/common :: menu('home')"></nav>
+
+
+
+<main>
+
+    <div class="position-relative overflow-hidden text-center bg-light" style="margin-top: 7rem">
+        <div>
+            <img th:src="@{/image/banner.png}" style="width: 100%">
+        </div>
+
+    </div>
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <!-- START THE FEATURETTES -->
+    <div class="container marketing">
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="featurette-heading">
+                    <span style="font-weight: bold;">영상진단</span>
+                    <span class="text-muted" style="font-size: 2rem">Imaging Diagnosis</span>
+                </h2>
+                <br>
+                <p class="lead">&nbsp;&nbsp;영상진단 기능을 통해 현재 사용자의 자세 상태를 알아보세요</p>
+            </div>
+            <div class="col-md-5">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="350"
+                     th:src="@{/image/turtleneck.JPG}" xmlns="http://www.w3.org/2000/svg" role="img"
+                     aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>
+                Placeholder</title>
+                <rect width="100%" height="100%" fill="#eee"/>
+                </img>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">
+                    <span style="font-weight: bold;">자가진단</span>
+                    <span class="text-muted" style="font-size: 2rem">Self-Diagnosis </span>
+                </h2>
+                <br>
+                <p class="lead"> 자가진단 기능을 통해 골격 계통 질환에 해당되는지 알아보세요</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" height="200"
+                     th:src="@{/image/checklist.png}" xmlns="http://www.w3.org/2000/svg" role="img"
+                     aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>
+                Placeholder</title>
+                <rect width="100%" height="100%" fill="#eee"/>
+                </img>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <a th:href="@{/disease/index}">
+                    <h2 class="featurette-heading">
+                        <span style="font-weight: bold;">질환</span>
+                        <span class="text-muted" style="font-size: 2rem">Disease</span>
+                    </h2>
+                    <br>
+                    <p class="lead">골격 계통 질환 종류에 대해 자세히 알아보아요</p>
+                </a>
+            </div>
+            <div class="col-md-5">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" height="200"
+                     th:src="@{/image/disease.JPG}" xmlns="http://www.w3.org/2000/svg" role="img"
+                     aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>
+                Placeholder</title>
+                <rect width="100%" height="100%" fill="#eee"/>
+                </img>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-6 order-md-2">
+                <h2 class="featurette-heading">
+                    <span style="font-weight: bold;">스트레칭</span>
+                    <span class="text-muted" style="font-size: 2rem">Stretching</span>
+                </h2>
+                <br>
+                <p class="lead">간단한 스트레칭으로 골격 계통 질환을 예방해보세요</p>
+            </div>
+            <div class="col-md-6 order-md-1">
+                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                     th:src="@{/image/stretching.jpg}" xmlns="http://www.w3.org/2000/svg" role="img"
+                     aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>
+                Placeholder</title>
+                <rect width="100%" height="100%" fill="#eee"/>
+                </img>
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+        <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+    <br><br>
+
+    <!-- FOOTER -->
+    <div th:replace="fragments/common :: bottom"></div>
+</main>
+
+<footer th:replace="fragments/common :: footer"></footer>
+</body>
+</html>
