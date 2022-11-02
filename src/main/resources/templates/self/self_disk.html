@@ -1,0 +1,32 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('허리 디스크 자가진단')"></head>
+<body>
+
+
+<nav th:replace="fragments/common :: menu('self')"></nav>
+
+
+<main>
+
+  <div style="margin:5% auto;text-align:center" >
+    <img th:src="@{/image/self_disk.png}"width="600">
+  </div>
+  <div style="margin-bottom:10%;text-align:center" >
+    <a class="btn btn-outline-primary col-md-1 mx-5" style="width:300px" type="button" href="#"
+       th:href="@{/disease/disease_disk}">허리 디스크 상세설명으로 이동</a>
+  </div>
+
+
+</main>
+
+<!-- FOOTER -->
+<div th:replace="fragments/common :: bottom"></div>
+
+
+<!--<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
+<footer th:replace="fragments/common :: footer"></footer>
+
+</body>
+</html>

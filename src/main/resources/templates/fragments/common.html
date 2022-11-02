@@ -25,7 +25,7 @@
                         <a class="nav-link" href="#">영상진단 <span class="visually-hidden" th:if="${menu} == 'video'">(current)</span> </a>
                     </li>
                     <li class="nav-item" th:classappend="${menu} == 'self' ? 'active'">
-                        <a class="nav-link" href="#">자가진단 <span class="visually-hidden" th:if="${menu} == 'self'">(current)</span></a>
+                        <a class="nav-link" href="#" th:href="@{/self/index}">자가진단 <span class="visually-hidden" th:if="${menu} == 'self'">(current)</span></a>
                     </li>
                     <li class="nav-item" th:classappend="${menu} == 'disease'? 'active'">
                         <a class="nav-link" href="#" th:href="@{/disease/index}">질환 <span class="visually-hidden" th:if="${menu} == 'disease'">(current)</span></a>

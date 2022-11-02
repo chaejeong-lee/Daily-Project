@@ -1,0 +1,126 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('자가진단')"></head>
+<body>
+
+
+<nav th:replace="fragments/common :: menu('self')"></nav>
+
+
+<main>
+
+    <!--    <section class="py-5 text-center container">-->
+    <!--        <div class="row py-lg-5">-->
+    <!--            <div class="col-lg-6 col-md-8 mx-auto">-->
+    <!--                <h1 class="fw-light">Album example</h1>-->
+    <!--                <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>-->
+    <!--                <p>-->
+    <!--                    <a href="#" class="btn btn-primary my-2">Main call to action</a>-->
+    <!--                    <a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
+    <div class="text-center">
+        <div class="col-md-12">
+            <h1 class="h1 mt-5 mb-4">
+                <span style="font-weight: bold;">자가진단</span>
+                <span class="text-muted" style="font-size: 2rem">Self-Diagnosis</span>
+            </h1>
+            <br>
+            <p class="lead mb-5">올바르지 않은 자세로 인한 질병과 관련된 자가진단 테스트를 해보아요</p>
+        </div>
+    </div>
+
+
+    <div class="album py-5 bg-light">
+        <div class="container" style="margin-bottom:8%">
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <a class="card shadow-sm" th:href="@{/self/self_turtleneck}">
+                        <div class="text-center" style="margin-top:55px;margin-bottom:55px">
+                            <h5 style="font-weight:bold;margin-top:3%">거북목 증후군</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a class="card shadow-sm" th:href="@{/self/self_scoliosis}">
+                        <div class="text-center" style="margin-top:55px;margin-bottom:55px">
+                            <h5 style="font-weight:bold;margin-top:3%">척추측만증</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <a class="card shadow-sm" th:href="@{/self/self_frozen_shoulder}">
+                        <div class="text-center" style="margin-top:55px;margin-bottom:55px">
+                            <h5 style="font-weight:bold;margin-top:3%">오십견</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a class="card shadow-sm" th:href="@{/self/self_disk}">
+                        <div class="text-center" style="margin-top:55px;margin-bottom:55px">
+                            <h5 style="font-weight:bold;margin-top:3%">허리디스크</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a class="card shadow-sm" th:href="@{/self/self_rcs}">
+                        <div class="text-center" style="margin-top:55px;margin-bottom:55px">
+                            <h5 style="font-weight:bold;margin-top:3%">회전근개 증후군</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a class="card shadow-sm" th:href="@{/self/self_hand}">
+                        <div class="text-center" style="margin-top:55px;margin-bottom:55px">
+                            <h5 style="font-weight:bold;margin-top:3%">손목 터널 증후군</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a class="card shadow-sm" th:href="@{/self/self_roundshoulder}">
+                        <div class="text-center" style="margin-top:55px;margin-bottom:55px">
+                            <h5 style="font-weight:bold;margin-top:3%">라운드 숄더(굽은 어깨)</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a class="card shadow-sm" th:href="@{/self/self_bowlegs}">
+                        <div class="text-center" style="margin-top:55px;margin-bottom:55px">
+                            <h5 style="font-weight:bold;margin-top:3%">휜 다리</h5>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a class="card shadow-sm" th:href="@{/self/self_halluxValgus}">
+                        <div class="text-center" style="margin-top:55px;margin-bottom:55px">
+                            <h5 style="font-weight:bold;margin-top:3%">무지외반증</h5>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+<!-- FOOTER -->
+<div th:replace="fragments/common :: bottom"></div>
+
+
+<!--<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
+<footer th:replace="fragments/common :: footer"></footer>
+
+</body>
+</html>

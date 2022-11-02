@@ -12,4 +12,7 @@ public class DiseaseController {
     public String index() {
         return "disease/index";
     }
+
+    @GetMapping("/disease_turtleneck")
+    public String disease_turtleneck() {return "disease/disease_turtleneck";}
 }
