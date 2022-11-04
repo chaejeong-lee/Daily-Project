@@ -9,44 +9,66 @@
 
 
 <main>
-    <div class="container px-4 py-5" id="featured-3">
+    <div class="container px-5 py-5" id="featured-3">
 
-        <h2 class="pb-2 border-bottom">거북목 증후군</h2>
+        <div>
+            <h1 class="pb-2 fw-bold mt-5 text-center">거북목 증후군 (Turtle Neck Syndrome)</h1>
 
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-1">
-            <div class="feature col">
-                <h3 class="fs-2">정의</h3>
-                <p>
-                    <img th:src="@{/image/disease_turtleneck5.png}"width="300px" class=""myimage>
-                    잘못된 자세로 인해 목, 어깨의 근육과 인대가 늘어나 통증이 생기는 증상을 의미합니다.
+            <hr class="featurette-divider">
+        </div>
+        <div class="row gx-4 gx-lg-5 align-items-center my-5">
+            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" th:src="@{/image/detail_turtleneck.JPG}" alt="..." /></div>
+            <div class="col-lg-5" style="font-size:20px">
+                <br>
+                <p>거북목 증후군은 잘못된 자세로 인해 목, 어깨의 근육과 인대가 늘어나 통증이 생기는 증상을 의미합니다.
                     평소 컴퓨터 모니터를 많이 보는 사람, 특히 낮은 위치에 있는 모니터를 내려다보는 사람에게 많이 발생합니다.
                     거북이가 목을 뺀 상태와 비슷하다 하여 거북목 증후군이라는 이름이 붙여졌습니다.
                 </p>
+
             </div>
         </div>
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-            <div class="feature col">
-                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                    <svg class="bi" width="1em" height="1em"><use xlink:href="#collection"/></svg>
+        <!-- Call to Action-->
+        <div class="card text-white bg-secondary my-5 py-4 text-center">
+            <div class="card-body"><p class="text-white m-0" style="font-size:20px">거북목 증후군의 원인, 증상, 치료에 대해 알아보아요!</p></div>
+        </div>
+        <div style="margin-top:4%; margin-bottom:4%">
+            <div class="main">
+                <input type="radio" id="tab-1" name="show" checked/>
+                <input type="radio" id="tab-2" name="show" />
+                <input type="radio" id="tab-3" name="show" />
+                    <div class="tab">
+                        <label for="tab-1">원인</label>
+                        <label for="tab-2">증상</label>
+                        <label for="tab-3">치료</label>
+                    </div>
+                        <div class="content">
+                            <div class="content-dis">
+                                거북목 증후군의 가장 큰 원인은 눈높이보다 낮은 컴퓨터 모니터를 장시간 같은 자세로 내려다보는 것입니다.
+                                처음에는 모니터를 똑바로 쳐다보다가도 점차 고개가 숙여지면서 목이 길어집니다.
+                                이렇게 머리가 앞으로, 또 아래로 향하는 자세가 계속되면, 목과 어깨의 근육뿐만 아니라 척추에도 무리가 생겨 통증이 발생합니다.
+                                그리고 허리가 구부러지고 눈은 위로 치켜뜬 상태가 됩니다.
+                                이런 자세가 반복되면 근육이나 뼈가 자동으로 굳어지고 통증이 생깁니다. 책을 보는 자세에서도 유발될 수 있으니 유의해야 합니다.
+                            </div>
+                            <div class="content-dis">
+                                대표적인 증상은 목덜미와 어깨가 뻐근하고 아픈 것입니다. 또 어깨 근육이 많이 뭉치고 두통이 생기며 쉽게 피곤해집니다.
+                                작업 능률과 학습 능률이 떨어지고, 신경질이 나고 과민해집니다.
+                                팔의 저림도 나타날 수 있습니다. 드물지만 불면증이나 어지럼증이 나타나기도 합니다.
+                            </div>
+                            <div class="content-dis">
+                                증상이 심한 경우 전문 기관에서 전문가와 상의한 후 전문 장비와 기구를 이용해 교정 운동을 해야 합니다.
+                                보통 3개월 이상 치료해야 자세가 교정됩니다.
+                                거북목 증후군의 원인을 바로 알고 일상생활에서 자세를 바르게 하려고 노력해야 합니다.
+                            </div>
+                        <div>
+                    </div>
                 </div>
-                <h3 class="fs-2">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                <a href="#" class="icon-link d-inline-flex align-items-center">
-                    Call to action
-                    <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
-                </a>
             </div>
-            <div class="feature col">
-                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-                    <svg class="bi" width="1em" height="1em"><use xlink:href="#people-circle"/></svg>
-                </div>
-                <h3 class="fs-2">Featured title</h3>
-                <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-                <a href="#" class="icon-link d-inline-flex align-items-center">
-                    Call to action
-                    <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"/></svg>
-                </a>
-            </div>
+        </div>
+
+        <div style="text-align:center;color:red;margin-bottom:4%">
+            <h5 class="fw-bold">
+                정확한 진단은 전문가와 상담해보세요.
+            </h5>
         </div>
     </div>
 </main>
