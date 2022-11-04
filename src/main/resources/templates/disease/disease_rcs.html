@@ -1,0 +1,96 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('회전근개 증후군 질환')"></head>
+<body>
+
+
+<nav th:replace="fragments/common :: menu('disease_rcs')"></nav>
+
+
+<main>
+    <div class="container px-5 py-5" id="featured-3">
+
+        <div>
+            <h1 class="pb-2 fw-bold mt-5 text-center">회전근개 증후군(Rotator cuff syndrome)</h1>
+
+            <hr class="featurette-divider">
+        </div>
+        <div class="row gx-4 gx-lg-5 align-items-center my-5">
+            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" th:src="@{/image/detail_rcs.JPG}" alt="..." /></div>
+            <div class="col-lg-5" style="font-size:20px">
+                <br>
+                <p>
+                    회전근개 증후군은 회전근개에 변형과 파열이 생긴 질환을 말합니다.
+                    회전근개란 어깨와 팔을 연결하는 4개의 근육(극상근, 극하근, 소원근, 겹갑하근) 및 힘줄로 이루어져 있는 것입니다.
+                    <br>
+                    어깨 근육의 통증을 막연히 오십견으로 알고 방치하다가 치료 시기가 늦어지는 경우가 있습니다. 적절한 시기에 병원에 가는 것이 필요합니다.
+                </p>
+
+            </div>
+        </div>
+        <!-- Call to Action-->
+        <div class="card text-white bg-secondary my-5 py-4 text-center">
+            <div class="card-body"><p class="text-white m-0" style="font-size:20px">회전근개 증후군의 원인, 증상, 치료에 대해 알아보아요!</p></div>
+        </div>
+        <div style="margin-top:4%; margin-bottom:4%">
+            <div class="main">
+                <input type="radio" id="tab-1" name="show" checked/>
+                <input type="radio" id="tab-2" name="show" />
+                <input type="radio" id="tab-3" name="show" />
+                <div class="tab">
+                    <label for="tab-1">원인</label>
+                    <label for="tab-2">증상</label>
+                    <label for="tab-3">치료</label>
+                </div>
+                <div class="content">
+                    <div class="content-dis">
+                        회전근개 증후군을 유발하는 요인은 다음과 같습니다.<br>
+                        ① 운동에 의해 근육이나 힘줄을 과도하게 사용하거나 과도한 힘을 가했을 때 생기는 염증으로 인해 발생할 수 있습니다.<br>
+                        ② 어깨 관절과 회전근개 힘줄 사이의 활막의 자극이나 염증으로 인해 발생할 수 있습니다.<br>
+                        ③ 치료를 하지 않고 방치하면 염증이 악화되거나 만성적으로 근육이 퇴행하거나 파열이 일어날 수 있습니다.<br>
+                        ④ 40세 이상이 되면, 회전근개 근육이나 힘줄이 퇴행성으로 변화하여 파열될 수 있습니다.<br>
+                        ⑤ 좋지 않은 자세를 취하거나 팔을 딛고 넘어졌을 때, 무거운 물건을 들었을 때, 머리 위쪽으로 팔을 많이 올릴 때 회전근개 근육이나 힘줄에 스트레스가 가해져 염증과 파열이 일어날 수 있습니다. 특히 야구 투수나 수영 선수, 테니스 선수나 목수 등의 직업군에서 많이 발생합니다.
+                    </div>
+                    <div class="content-dis">
+                        회전근개 증후군 증상은 목과 어깨 부위에 나타납니다. 팔을 들거나 손을 등 뒤로 했을 때 통증이 심해집니다.
+                        팔은 완전히 올리면 통증이 감소하는 경우가 있고, 운동 범위가 감소하며, 팔을 움직이면 어깨에서 마찰음 같은 소리가 날 수 있습니다.
+                        어깨 주위 근육이 약화될 수 있습니다. 밤에 통증이 더 많이 발생할 수 있습니다.
+                    </div>
+                    <div class="content-dis">
+                        회전근개 증후군 치료법은 손상정도에 따라 구분됩니다. 비수술적 치료와 수술적 치료가 있습니다.<br>
+                        ① 비수술적 치료(보존적 치료)<br>
+                        회전근개에 부분 파열이 있을 때는 보존적 치료를 할 수 있습니다.
+                        보존적 치료를 하는 동안에는 일상생활에서 무리가 가지 않는 정도의 활동은 해도 괜찮지만,
+                        회전근개에 무리가 가는 행동을 해서는 안 됩니다. 회복을 위해 운동 치료를 해야 합니다.
+                        운동 치료는 회전근개만을 선택적으로 강화할 수 있는 일련의 특수한 동작으로 이루어져 있습니다. 간단한 도구를 이용합니다.
+                        약물이나 운동 치료를 해도 증상이 호전되지 않을 경우 수술을 시행합니다.<br>
+                        ② 수술적 치료<br>
+                        회전근개가 완전히 파열되어 기능에 장애가 생겼을 경우 수술을 해야 합니다.
+                        수술은 전신 마취하에 관절 내시경으로 수술할 수 있습니다. 파열 부위가 큰 경우에는 약간 절개하고 수술을 할 수 있습니다.
+                        관절 내시경 수술은 진단과 동시에 수술이 가능합니다.
+                        이는 절개 부위가 작고 손상이 적기 때문에 입원 기간이 짧고 수술 후 회복이 빠르다는 장점이 있습니다.
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align:center;color:red;margin-bottom:4%">
+            <h5 class="fw-bold">
+                정확한 진단은 전문가와 상담해보세요.
+            </h5>
+        </div>
+    </div>
+</main>
+
+<!-- FOOTER -->
+<div th:replace="fragments/common :: bottom"></div>
+
+
+<!--<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
+<footer th:replace="fragments/common :: footer"></footer>
+
+</body>
+</html>

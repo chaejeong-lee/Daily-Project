@@ -1,0 +1,83 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('무지외반증 질환')"></head>
+<body>
+
+
+<nav th:replace="fragments/common :: menu('disease_Halluxvalgus')"></nav>
+
+
+<main>
+  <div class="container px-5 py-5" id="featured-3">
+
+    <div>
+      <h1 class="pb-2 fw-bold mt-5 text-center">무지외반증(Hallux valgus)</h1>
+
+      <hr class="featurette-divider">
+    </div>
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+      <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" th:src="@{/image/disease_Halluxvalgus.JPG}" style="margin-left:8%" width="500px" alt="..." /></div>
+      <div class="col-lg-5" style="font-size:20px">
+        <br>
+        <p>무지외반증은 엄지발가락이 둘째발가락 쪽으로 심하게 휘어져서 엄지발가락 관절이 안쪽으로 돌출된 상태를 의미합니다.
+          이 증상이 심할 경우, 엄지발가락이 둘째발가락과 엇갈리는 정도까지 돌아가기도 합니다.
+          특히 앞이 좁고 굽이 높은 신발을 자주 신는 여성에게 잘 발생하는 족부 질환입니다.
+        </p>
+
+      </div>
+    </div>
+    <!-- Call to Action-->
+    <div class="card text-white bg-secondary my-5 py-4 text-center">
+      <div class="card-body"><p class="text-white m-0" style="font-size:20px">무지외반증의 원인, 증상, 치료에 대해 알아보아요!</p></div>
+    </div>
+    <div style="margin-top:4%; margin-bottom:4%">
+      <div class="main">
+        <input type="radio" id="tab-1" name="show" checked/>
+        <input type="radio" id="tab-2" name="show" />
+        <input type="radio" id="tab-3" name="show" />
+        <div class="tab">
+          <label for="tab-1">원인</label>
+          <label for="tab-2">증상</label>
+          <label for="tab-3">치료</label>
+        </div>
+        <div class="content">
+          <div class="content-dis">
+            무지외반증의 발생에는 유전적 소인과 후천적 요인이 복합적으로 작용합니다.
+            유전적으로 평발이거나 발 볼이 넓은 경우, 무지외반증이 발생하기 쉽습니다.
+            후천적으로 볼이 좁고 굽이 높은 신발을 자주 신는 경우 무지외반증에 걸릴 위험성이 증가합니다.
+          </div>
+          <div class="content-dis">
+            무지외반증의 증상은 엄지발가락이 둘째발가락 쪽으로 휘어지고 관절이 안쪽으로 돌출되는 것입니다. 돌출된 관절은 서 있거나 걸을 때 자극을 받아 빨개지고, 이에 따라 굳은살, 염증, 통증이 발생합니다.
+            걸을 때 신체를 지지하고 추진력을 주어야 하는 엄지발가락이 제 역할을 하지 못하기 때문에 발의 다른 부위에도 통증이 발생합니다.
+            무지외반증이 심해지면 발 모양 변형, 허리 통증 등이 나타납니다.
+          </div>
+          <div class="content-dis">
+            무지외반증의 치료는 환자가 느끼는 증상, 변형의 심각성, 치료의 목적(염증과 통증의 조절인지, 미용적 문제까지 해결하는 것인지) 등에 따라 달라집니다.
+            무지외반증이 심하지 않은 경우, 증상을 조절하고 변형의 진행을 늦추기 위해서 볼이 넓고 부드러운 신발을 착용하거나, 교정을 위한 깔창이나 보형물을 사용합니다.
+            심한 변형이 동반된 경우, 수술을 통해 교정해야 합니다.
+            수술을 통해 돌출 부위의 뼈를 깎고 인대와 연부 조직의 길이를 조절합니다.
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;color:red;margin-bottom:4%">
+      <h5 class="fw-bold">
+        정확한 진단은 전문가와 상담해보세요.
+      </h5>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<div th:replace="fragments/common :: bottom"></div>
+
+
+<!--<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
+<footer th:replace="fragments/common :: footer"></footer>
+
+</body>
+</html>
