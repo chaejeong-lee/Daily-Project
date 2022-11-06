@@ -24,4 +24,7 @@ public class DiseaseController {
 
     @GetMapping("/disease_halluxValgus")
     public String disease_halluxV(){return "disease/disease_halluxValgus";}
+
+    @GetMapping("/disease_bowlegs")
+    public String disease_bowlegs(){return "disease/disease_bowlegs";}
 }

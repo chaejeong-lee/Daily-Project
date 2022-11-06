@@ -1,0 +1,102 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('휜다리 질환')"></head>
+<body>
+
+
+<nav th:replace="fragments/common :: menu('disease_bowlegs')"></nav>
+
+
+<main>
+  <div class="container px-5 py-5" id="featured-3">
+
+    <div>
+      <h1 class="pb-2 fw-bold mt-5 text-center">휜다리(angular deformity)</h1>
+
+      <hr class="featurette-divider">
+    </div>
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+      <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" th:src="@{/image/disease_bowlegs.png}" style="margin-left:8%" width="500px" alt="..." /></div>
+      <div class="col-lg-5" style="font-size:20px">
+        <br>
+        <p>다리의 뼈 자체가 휘거나 뼈들의 정렬이 잘못된 결과로, 무릎을 사이에 두고
+          넙적다리뼈에서 정강이뼈로 이어지는 축이 일직선에서 벗어난 상태를 말합니다.
+          그러나 이 축은 나이에 따라 변화하므로 환자의 연령에 따라 정상, 비정상 여부를 결정할 수 있습니다.<br><br>
+          휜다리의 종류 : 내반슬, 외반슬, 반장슬, 반장슬
+        </p>
+
+      </div>
+    </div>
+    <!-- Call to Action-->
+    <div class="card text-white bg-secondary my-5 py-4 text-center">
+      <div class="card-body"><p class="text-white m-0" style="font-size:20px">손목 터널 증후군의 원인, 증상, 치료에 대해 알아보아요!</p></div>
+    </div>
+    <div style="margin-top:4%; margin-bottom:4%">
+      <div class="main">
+        <input type="radio" id="tab-1" name="show" checked/>
+        <input type="radio" id="tab-2" name="show" />
+        <input type="radio" id="tab-3" name="show" />
+        <div class="tab">
+          <label for="tab-1">원인</label>
+          <label for="tab-2">증상</label>
+          <label for="tab-3">예방생활수칙</label>
+        </div>
+        <div class="content">
+          <div class="content-dis">
+            휜다리의 원인은 크게 두 가지로 나눌 수 있는데,<br>
+            한 가지는 선천적인 원인으로 뼈자체의 휘어짐,  다른 한가지는 후천적인 원인으로 골반을 포함한 다리 관절 배열의 이상이 원인입니다.
+            <br><br>
+            선천적으로 휜다리를 가지고 태어나는 경우는 극히 드문 사례이며,
+            이 경우에는 교정치료로는 치료가 불가능하며 수술을 통해서만이 치료할 수 있습니다.
+            하지만 대부분의 휜다리는 후천적인 영향으로, 골반 및 다리관절의 배열이상이 그 원인인데,
+            이는 다리의 교정뿐 아니라 골반과 척추의 정상화가 필요합니다.
+            우선 정적인 자세, 즉, 가만히 누워있을 때, 서 있을 때, 앉아 있을 때의 다리 모양을 곧게 만들어야 합니다.
+            더불어 걷거나 뛰거나 앉았다 일어나는 등의 동적자세 움직임도 곧게 만들어야 제대로 된 효과를 얻을 수 있습니다.
+            <br><br>
+            대부분의 사람들은 휜다리를 다리만의 문제로 치부하고 있는데, 이는 잘못된 상식이며,
+            휜다리를 치료하려면 척추의 배열이상과 골반의 틀어짐을 바로잡아주는 것이 중요합니다.
+            즉, 휜다리가 되지 않기 위해서는 올바른 척추의 배열이 중요하다고 할 수 있습니다.<br><br>
+            선천적 원인 : 부모로부터 물려받은 유전, 질병(뇌성마비, 소아마비)<br>
+            후천적 원인 : 생활양식(좌식생활, 보행습관, 운동부족, 다리꼬는 습관, 하이힐의 장시간 착용), 질병(구루병), 골반 틀어짐
+          </div>
+          <div class="content-dis">
+            휜다리는 뼈가 성장하고 있는 경우라면, 성장판에 전달되는 자극의 불균형으로 뼈의 성장 역시
+            균형을 잃어 뼈가 성장할수록 더 심하게 휘게 됩니다.
+            결국 휜다리가 상태를 더 악화시키게 되고, 키가 커야 할 청소년이 충분히 크지 못하는 결과를
+            초래하게 됩니다.
+            <br><br>
+            심한 O형 다리나 X형 다리의 경우에는 관절에 미치는 부담이 증가하면서 관절의 퇴행성 변화를
+            가속화시키고 결국 남들보다 일찍부터 관절염을 겪을 수 있습니다.
+            <br><br>
+            따라서 되도록 어릴 때 발견하여 치료해 주는 것이 좋습니다.
+          </div>
+          <div class="content-dis">
+            ✓ 바른 걸음으로 보행 할 수 있도록 항상 주의, 관찰하기<br>
+            ✓ 오랜 시간 앉아 있지 마세요. 부득이한 경우 50분마다 휴식시간 갖기<br>
+            ✓ 간단한 스트레칭과 체조를 틈틈이 하기<br>
+            ✓ 하이힐 신고 난 후 꼭 발목 아킬레스건 스트레칭하기<br>
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;color:red;margin-top:2%;margin-bottom:4%">
+      <h5 class="fw-bold">
+        정확한 진단은 전문가와 상담해보세요.
+      </h5>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<div th:replace="fragments/common :: bottom"></div>
+
+
+<!--<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
+<footer th:replace="fragments/common :: footer"></footer>
+
+</body>
+</html>
