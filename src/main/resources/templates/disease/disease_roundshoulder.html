@@ -1,0 +1,80 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('라운드숄더 질환')"></head>
+<body>
+
+
+<nav th:replace="fragments/common :: menu('disease_roundshoulder')"></nav>
+
+
+<main>
+  <div class="container px-5 py-5" id="featured-3">
+
+    <div>
+      <h1 class="pb-2 fw-bold mt-5 text-center">라운드숄더(Round Shoulder)</h1>
+
+      <hr class="featurette-divider">
+    </div>
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+      <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" width="480px" height="290px" th:src="@{/image/detail_roundshoulder.JPG}" alt="..." /></div>
+      <div class="col-lg-5" style="font-size:20px">
+        <br>
+        <p>
+          ‘라운드숄더’란 어깨가 말리고, 등이 굽어진 현상을 뜻하는 말로 상부승모근과 소흉근이 단축되고 하부승모근과 능형근이 약해지면서 발생하는 질환이다.<br>
+          현대인들에게 많이 나타나는 질환 중 하나이며, 신체가 왜소해 보이거나 축 처진 듯한 인상을 줍니다.
+        </p>
+
+      </div>
+    </div>
+    <!-- Call to Action-->
+    <div class="card text-white bg-secondary my-5 py-4 text-center">
+      <div class="card-body"><p class="text-white m-0" style="font-size:20px">라운드숄더의 원인, 증상, 치료에 대해 알아보아요!</p></div>
+    </div>
+    <div style="margin-top:4%; margin-bottom:4%">
+      <div class="main">
+        <input type="radio" id="tab-1" name="show" checked/>
+        <input type="radio" id="tab-2" name="show" />
+        <input type="radio" id="tab-3" name="show" />
+        <div class="tab">
+          <label for="tab-1">원인</label>
+          <label for="tab-2">증상</label>
+          <label for="tab-3">치료</label>
+        </div>
+        <div class="content">
+          <div class="content-dis">
+            라운드숄더의 원인은 근육이 수축된 상태로 장시간 방치되기 때문인데, 대부분 잘못된 생활습관이 원인입니다. 의자 끝에 걸터앉거나 모니터 앞에 가까이 앉는 자세, 구부정하게 TV나 컴퓨터, 스마트폰 화면을 보는 자세 등은 라운드숄더 증상을 유발하는 대표적인 잘못된 자세입니다.
+          </div>
+          <div class="content-dis">
+            어깨가 좁고 둥글어 왜소해 보이는 편이라면 체격이 문제가 아닌 어깨가 둥글게 말린 ‘라운드 숄더’일 수 있습니다. 어깨가 앞으로 둥글게 말리는 라운드 숄더는 견갑골이 본래의 위치를 벗어난 상태이므로 어깨 근육이 매우 긴장되어 있으며 관절이 움직이며 충돌을 일으키기도 합니다.
+            <br>
+            날개뼈, 어깨가 결리거나 만성적인 근육통이 생길 수 있으며 결국 척추에도 악영향을 주어 허리디스크나 척추관 협착증, 척추측만증의 발생 원인이 될 수 있다. 지금 당장 심각한 증상이 느껴지지 않는다 하더라도 신체 불균형을 조속히 해결하기 위해 생활 습관 개선에 노력을 해야 합니다.
+          </div>
+          <div class="content-dis">
+            대부분 날갯죽지와 등 부분이 “뭉쳐있다”고 인식하여 등 마사지를 하여 뭉친 근육을 풀어주는 것이 일반적인 접근방법입니다. 분명 마사지를 받는 동안에는 통증이 좀 사라지고 시원한 느낌이 들지만 일시적인 효과만 보거나 다음날 도리어 더 불편해지기도 합니다. 그 이유는 이미 이완되어 있는 근육을 더 늘렸기에 결과적으론 뭉쳐있는 근육을 푼 것이 아닌 약해진 근육을 더욱 더 늘려버린 셈입니다.
+            <br>
+            올바른 치유 방법으로는 우선 수축되어있는 가슴근육을 먼저 마사지와 꾸준한 스트레칭을 통하여 다시 늘려주어야 하며, 반대로 이완되어 약해진 능형근은 운동을 통하여 강하게 만들어 주는 것입니다.
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;color:red;margin-bottom:4%">
+      <h5 class="fw-bold">
+        정확한 진단은 전문가와 상담해보세요.
+      </h5>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<div th:replace="fragments/common :: bottom"></div>
+
+
+<!--<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
+<footer th:replace="fragments/common :: footer"></footer>
+
+</body>
+</html>

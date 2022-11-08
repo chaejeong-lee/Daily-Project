@@ -1,0 +1,82 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('허리디스크 질환')"></head>
+<body>
+
+
+<nav th:replace="fragments/common :: menu('disease_hivd')"></nav>
+
+
+<main>
+  <div class="container px-5 py-5" id="featured-3">
+
+    <div>
+      <h1 class="pb-2 fw-bold mt-5 text-center">허리디스크(Herniated Inter Vertebral Disc)</h1>
+
+      <hr class="featurette-divider">
+    </div>
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+      <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" th:src="@{/image/detail_hivd.JPG}" alt="..." /></div>
+      <div class="col-lg-5" style="font-size:20px">
+        <br>
+        <p>
+          디스크는 스프링처럼 충격을 완화 시키고 척추 뼈가 밀리지 않고, 척추 뼈들이 부딪히지 않도록 보호해줍니다. 나이가 들어감에 따라 수핵의 수분함량의 감소로 탄력성이 떨어지면서, 또한 나쁜 자세나 사고등 외부적인 자극이 가해져 디스크가 밀려나 주위 신경근을 자극하여 통증을 일으키는 것을 `허리디스크(추간판 탈출증)`이라 합니다.
+        </p>
+
+      </div>
+    </div>
+    <!-- Call to Action-->
+    <div class="card text-white bg-secondary my-5 py-4 text-center">
+      <div class="card-body"><p class="text-white m-0" style="font-size:20px">허리디스크의 원인, 증상, 치료에 대해 알아보아요!</p></div>
+    </div>
+    <div style="margin-top:4%; margin-bottom:4%">
+      <div class="main">
+        <input type="radio" id="tab-1" name="show" checked/>
+        <input type="radio" id="tab-2" name="show" />
+        <input type="radio" id="tab-3" name="show" />
+        <div class="tab">
+          <label for="tab-1">원인</label>
+          <label for="tab-2">증상</label>
+          <label for="tab-3">치료</label>
+        </div>
+        <div class="content">
+          <div class="content-dis">
+            퇴행성 변화로 탄력성이 떨어진 수핵이 파열된 섬유테 틈으로 밀고 나와 신경을 압박합니다. 무거운 물건 들어올리기, 장시간 앉아서 일하는 직업에 종사하는 사람, 비만, 흡연, 나쁜 자세, 사고 등으로 디스크가 생길 가능성이 높습니다.
+            또한, 노화에 따른 디스크 돌출의 빈도가 높아져 허리디스크로 이어지는 경우도 많습니다.
+          </div>
+          <div class="content-dis">
+            허리 디스크 환자에게 가장 두드러지게 나타나는 두 가지 증상은 '요통'과 '다리가 저리고 아픈 증상'입니다. 환자에 따라서 요통이 주 증상인 경우도 있고, 다리의 통증이 주 증상인 경우도 있습니다. <br>
+            하지만 대부분의 허리 디스크는 요통보다 다리의 통증이 더 심한 것이 특징입니다. 다리의 증상이 전혀 없이 요통만 있는 경우는 허리 디스크보다는 다른 원인이 있을 가능성이 있습니다.
+          </div>
+          <div class="content-dis">
+            보존적 치료 <br>
+            ① 침상 안정 및 물리 치료 : 디스크의 압력을 줄일 수 있고, 잠자는 자세는 옆으로 누워서 무릎을 약간 구부리고 자거나 바로 누워서 무릎 밑에 쿠션을 받치는 것이 좋습니다.<br>
+            ② 약물 요법 : 소염진통제, 근육이완제 등과 같은 약물 투여도 병행합니다.<br>
+
+            <br>수술적 치료<br>
+            보존적 치료에 효과가 없는 3개월 이상의 만성 요통에 빠른 통증완화의 방법으로 수술을 고려할 수 있습니다.
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;color:red;margin-bottom:4%">
+      <h5 class="fw-bold">
+        정확한 진단은 전문가와 상담해보세요.
+      </h5>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<div th:replace="fragments/common :: bottom"></div>
+
+
+<!--<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
+<footer th:replace="fragments/common :: footer"></footer>
+
+</body>
+</html>

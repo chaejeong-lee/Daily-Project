@@ -27,4 +27,16 @@ public class DiseaseController {
 
     @GetMapping("/disease_bowlegs")
     public String disease_bowlegs(){return "disease/disease_bowlegs";}
+
+    @GetMapping("/disease_scoliosis")
+    public String disease_scoliosis() {return "disease/disease_scoliosis";}
+
+    @GetMapping("/disease_frozenshoulder")
+    public String disease_frozenshoulder() {return "disease/disease_frozenshoulder";}
+
+    @GetMapping("/disease_hivd")
+    public String disease_hivd() {return "disease/disease_hivd";}
+
+    @GetMapping("/disease_roundshoulder")
+    public String disease_roundshoulder() {return "disease/disease_roundshoulder";}
 }

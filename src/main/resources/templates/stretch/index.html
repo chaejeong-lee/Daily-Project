@@ -1,0 +1,230 @@
+
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('스트레칭')">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+
+<nav th:replace="fragments/common :: menu('stretch')"></nav>
+
+<main>
+    <!--    <section class="py-5 text-center container">-->
+    <!--        <div class="row py-lg-5">-->
+    <!--            <div class="col-lg-6 col-md-8 mx-auto">-->
+    <!--                <h1 class="fw-light">Album example</h1>-->
+    <!--                <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>-->
+    <!--                <p>-->
+    <!--                    <a href="#" class="btn btn-primary my-2">Main call to action</a>-->
+    <!--                    <a href="#" class="btn btn-secondary my-2">Secondary action</a>-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
+    <div class="text-center">
+        <div class="col-md-12">
+            <h1 class="h1 mt-5 mb-4">
+                <span style="font-weight: bold;">스트레칭</span>
+                <span class="text-muted" style="font-size: 2rem">Stretching</span>
+            </h1>
+            <br>
+            <p class="lead mb-5">간단한 스트레칭으로 골격 계통 질환을 예방해보세요</p>
+        </div>
+    </div>
+
+    <div class="album py-5 bg-light">
+        <div class="container" style="margin-bottom:3%">
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                    <div class="card shadow-sm" >
+                        <a th:href="@{https://www.youtube.com/watch?v=nOGT4lXlSHw}" target="_blank">
+                            <img th:src="@{https://img.youtube.com/vi/nOGT4lXlSHw/0.jpg}" width="100%">
+
+                            <div class="text-center">
+                                <h5 style="font-weight:bold;margin-top:3%">전신</h5>
+                            </div>
+
+                            <div class="card-body">
+                                <p class="card-text">전신 스트레칭으로 뭉친 근육을 시원하게 풀어주세요!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">2022-10-31</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm" >
+                        <a th:href="@{https://www.youtube.com/watch?v=uxQdvSTEilI}" target="_blank">
+                            <img th:src="@{https://img.youtube.com/vi/uxQdvSTEilI/0.jpg}" width="100%">
+
+                            <div class="text-center">
+                                <h5 style="font-weight:bold;margin-top:3%">목, 어깨, 등</h5>
+                            </div>
+
+                            <div class="card-body">
+                                <p class="card-text">목, 어깨, 등 뭉친 근육을 시원하게 풀어주세요!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">2022-10-31</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm" >
+                        <a th:href="@{https://www.youtube.com/watch?v=QhRcs9d2Y9E}" target="_blank">
+                            <img th:src="@{https://img.youtube.com/vi/QhRcs9d2Y9E/0.jpg}" width="100%">
+
+                            <div class="text-center">
+                                <h5 style="font-weight:bold;margin-top:3%">허리</h5>
+                            </div>
+
+                            <div class="card-body">
+                                <p class="card-text">허리 뭉친 근육을 시원하게 풀어주세요!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">2022-10-31</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm" >
+                        <a th:href="@{https://www.youtube.com/watch?v=fFIL0rlRH78}" target="_blank">
+                            <img th:src="@{https://img.youtube.com/vi/fFIL0rlRH78/0.jpg}" width="100%">
+
+                            <div class="text-center">
+                                <h5 style="font-weight:bold;margin-top:3%">거북목 교정 스트레칭</h5>
+                            </div>
+
+                            <div class="card-body">
+                                <p class="card-text">굽은 등, 어깨를 교정하는 스트레칭으로 거북목 증후군을 예방하세요!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">2022-10-31</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm" >
+                        <a th:href="@{https://www.youtube.com/watch?v=z1IJvfqeUYs}" target="_blank">
+                            <img th:src="@{https://img.youtube.com/vi/z1IJvfqeUYs/0.jpg}" width="100%">
+
+                            <div class="text-center">
+                                <h5 style="font-weight:bold;margin-top:3%">오십견 스트레칭</h5>
+                            </div>
+
+                            <div class="card-body">
+                                <p class="card-text">오십견의 예방 및 증상 완화에 도움을 주는 스트레칭을 도전해보세요!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">2022-10-31</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm" >
+                        <a th:href="@{https://www.youtube.com/watch?v=hUB0dBxot_U}" target="_blank">
+                            <img th:src="@{https://img.youtube.com/vi/hUB0dBxot_U/0.jpg}" width="100%">
+
+                            <div class="text-center">
+                                <h5 style="font-weight:bold;margin-top:3%">척추측만증 스트레칭</h5>
+                            </div>
+
+                            <div class="card-body">
+                                <p class="card-text">척추측만증 관련 스트레칭으로 바른 자세를 유지해보세요!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">2022-10-31</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm" >
+                        <a th:href="@{https://www.youtube.com/watch?v=nQlbDogfCpE}" target="_blank">
+                            <img th:src="@{https://img.youtube.com/vi/nQlbDogfCpE/0.jpg}" width="100%">
+
+                            <div class="text-center">
+                                <h5 style="font-weight:bold;margin-top:3%">체형 교정 스트레칭</h5>
+                            </div>
+
+                            <div class="card-body">
+                                <p class="card-text">골반과 체형 교정에 도움이 되는 스트레칭 도전해보세요!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">2022-10-31</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm" >
+                        <a th:href="@{https://www.youtube.com/watch?v=aeOXx0a3zdE}" target="_blank">
+                            <img th:src="@{https://img.youtube.com/vi/aeOXx0a3zdE/0.jpg}" width="100%">
+
+                            <div class="text-center">
+                                <h5 style="font-weight:bold;margin-top:3%">고관절 스트레칭</h5>
+                            </div>
+
+                            <div class="card-body">
+                                <p class="card-text">허리와 무릎이 편해지는 고관절 스트레칭 도전해보세요!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">2022-10-31</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card shadow-sm" >
+                        <a th:href="@{https://www.youtube.com/watch?v=8dpdyiprNUg}" target="_blank">
+                            <img th:src="@{https://img.youtube.com/vi/8dpdyiprNUg/0.jpg}" width="100%">
+
+                            <div class="text-center">
+                                <h5 style="font-weight:bold;margin-top:3%">바른자세 스트레칭</h5>
+                            </div>
+
+                            <div class="card-body">
+                                <p class="card-text">의자에 앉아서 손쉽게 따라 할 수 있는 바른자세 스트레칭!</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <small class="text-muted">2022-10-31</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+<!-- FOOTER -->
+<div th:replace="fragments/common :: bottom"></div>
+
+
+<!--<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
+<footer th:replace="fragments/common :: footer"></footer>
+<script
+        src="https://code.jquery.com/jquery-3.6.1.slim.js"></script>
+<script src="js/bootstrap.js"></script>
+
+</body>
+</html>

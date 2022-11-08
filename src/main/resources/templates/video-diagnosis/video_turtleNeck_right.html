@@ -1,0 +1,61 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('거북목 영상진단')"></head>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet@2.2.2/dist/posenet.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter@3.11.0/dist/tf-converter.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection@0.0.6/dist/pose-detection.min.js"></script>
+
+    <style>
+            /* 이미지에 캔버스를 겹쳐서 그리기 위함 */
+            canvas {
+                position: absolute;
+                left: 30%;
+            }
+
+            video {
+                position: absolute;
+                left: 30%;
+            }
+
+
+
+    </style>
+</head>
+
+<body>
+
+<nav th:replace="fragments/common :: menu('video')"></nav>
+
+<br><br>
+
+
+<h1 class="pb-2 fw-bold text-center">거북목 영상진단(오른쪽)</h1>
+
+<div class="container">
+    <div class="mt-4">
+        <h3 id="result_label">진단을 진행하고 있습니다.(약 10초 소요)</h3>
+        <a class="btn btn-outline-primary float-end" type="button" th:href="@{/video-diagnosis/video_turtleNeck_right}">다시
+            검사하기</a>
+    </div>
+    <div class="mb-5" style="margin-top: 5rem;">
+        <video id="video" width="550" height="350" autoplay muted playsinline></video>
+        <canvas id="canvas"></canvas>
+    </div>
+</div>
+
+
+<footer th:replace="fragments/common :: footer"></footer>
+<script th:src="@{/javascript/turtleNeck_right.js}"></script>
+<script type="text/javascript">
+            window.addEventListener('message', function(e) {
+
+                document.getElementById('result_label').innerHTML = "진단 결과: " + e.data + "입니다.";
+            });
+
+</script>
+</body>
+</html>

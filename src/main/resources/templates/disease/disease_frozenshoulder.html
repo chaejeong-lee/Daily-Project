@@ -1,0 +1,85 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('오십견 질환')"></head>
+<body>
+
+
+<nav th:replace="fragments/common :: menu('disease_frozenshoulder')"></nav>
+
+
+<main>
+    <div class="container px-5 py-5" id="featured-3">
+
+        <div>
+            <h1 class="pb-2 fw-bold mt-5 text-center">오십견(Frozen Shoulder)</h1>
+
+            <hr class="featurette-divider">
+        </div>
+        <div class="row gx-4 gx-lg-5 align-items-center my-5">
+            <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" th:src="@{/image/detail_frozenshoulder.JPG}" alt="..." /></div>
+            <div class="col-lg-5" style="font-size:20px">
+                <br>
+                <p>
+                    오십견은 특별한 외상 없이 어깨에 통증이 발생하고 그 통증으로 인하여 어깨의 움직임에 지장이 생기는 질환을 의미합니다.
+                    <br>
+                    오십견의 특징은 만성적으로 어깨 관절의 통증과 운동의 장애, 특히 능동적 및 수동적 운동 범위가 모두 감소하는 것입니다.
+                </p>
+
+            </div>
+        </div>
+        <!-- Call to Action-->
+        <div class="card text-white bg-secondary my-5 py-4 text-center">
+            <div class="card-body"><p class="text-white m-0" style="font-size:20px">오십견의 원인, 증상, 치료에 대해 알아보아요!</p></div>
+        </div>
+        <div style="margin-top:4%; margin-bottom:4%">
+            <div class="main">
+                <input type="radio" id="tab-1" name="show" checked/>
+                <input type="radio" id="tab-2" name="show" />
+                <input type="radio" id="tab-3" name="show" />
+                <div class="tab">
+                    <label for="tab-1">원인</label>
+                    <label for="tab-2">증상</label>
+                    <label for="tab-3">치료</label>
+                </div>
+                <div class="content">
+                    <div class="content-dis">
+                        오십견의 원인은 불분명하지만, 주로 노화 및 운동 부족과 관련 있습니다. 노화에 따라 어깨관절 주위의 연부 조직이 퇴행성으로 변화하여 오십견이 생깁니다. <br>
+                        이외에 어깨관절의 부상이나 입원 등으로 인해 장기간 어깨관절을 사용하지 못한 경우에도 동결견이 발생할 수 있습니다. 간혹 특별한 원인 없이 발생하기도 합니다.
+                    </div>
+                    <div class="content-dis">
+                        ① 심한 통증 및 야간 통증<br>
+                        ② 능동적, 수동적 관절 운동 제한<br>
+                        어깨를 안쪽으로 돌리기 힘들며, 점차 팔을 앞으로 들거나 밖으로 돌리기 힘듭니다. <br>
+                        예를 들어, 세수하거나 머리를 감을 때 목덜미를 만지는 행동, 머리를 빗는 행동, 블라우스 뒤의 단추를 끼우는 행동 등을 하기 어렵습니다.
+                    </div>
+                    <div class="content-dis">
+                        초기에는 진통소염제, 국소 주사, 물리치료 등을 이용해 통증과 염증을 감소시키며, 운동 요법으로 굳어진 어깨관절의 운동 범위를 회복시킵니다.수술은 장기간의 치료에도 호전이 없는 경우에 시행합니다.<br>
+                        ① 물리 치료 <br>
+                        물리 치료로는 운동 범위를 늘려주는 신장 운동, 회전근 개 등장성 운동, 회전근 개 근력 강화, 적응 훈련 등 단계적으로 시행하게 되며 이러한 물리 치료를 정규적으로 반복함으로써 대개는 수술적 치료 없이 잘 회복됩니다.
+                        ② 수술적 치료<br>
+                        충분한 물리 치료로 해결되지 않는 오십견은 수력학적 팽창, 도수적 조작 등을 시도하거나 수술적 치료를  하게 됩니다.
+                    </div>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align:center;color:red;margin-bottom:4%">
+            <h5 class="fw-bold">
+                정확한 진단은 전문가와 상담해보세요.
+            </h5>
+        </div>
+    </div>
+</main>
+
+<!-- FOOTER -->
+<div th:replace="fragments/common :: bottom"></div>
+
+
+<!--<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
+<footer th:replace="fragments/common :: footer"></footer>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('영상진단')"></head>
+<body>
+
+
+<nav th:replace="fragments/common :: menu('self')"></nav>
+
+
+<main>
+
+    <div class="text-center">
+        <div class="col-md-12">
+            <h1 class="h1 mt-5 mb-4">
+                <span style="font-weight: bold;">영상진단</span>
+                <span class="text-muted" style="font-size: 2rem">Video-Diagnosis</span>
+            </h1>
+            <br>
+            <p class="lead mb-5">영상 인식을 통해 거북목 증후군을 진단해보아요.</p>
+        </div>
+    </div>
+
+
+    <div class="album py-5 bg-light">
+        <div class="container marketing">
+            <h3 class="text-center fw-bold">사용 방법</h3>
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">
+                        <span style="font-weight: bold;">Step 1</span>
+                    </h2>
+                    <br>
+                    <p class="lead">진단 시작 화면에 다음 안내가 뜰 경우 "허용"을 눌러주세요.</p>
+                </div>
+<!--                <div class="col-md-5">-->
+<!--                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="350"-->
+<!--                         th:src="@{/image/turtleneck.JPG}" xmlns="http://www.w3.org/2000/svg" role="img"-->
+<!--                         aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">-->
+<!--                    <title>-->
+<!--                        Placeholder</title>-->
+<!--                    <rect width="100%" height="100%" fill="#eee"/>-->
+<!--                    </img>-->
+<!--                </div>-->
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">
+                        <span style="font-weight: bold;">Step 2</span>
+                    </h2>
+                    <br>
+                    <p class="lead">앉은 상태에서 모니터에 상반신이 담기도록 조절해주세요</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="350"
+                         th:src="@{/image/seat.png}" xmlns="http://www.w3.org/2000/svg" role="img"
+                         aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>
+                        Placeholder</title>
+                    <rect width="100%" height="100%" fill="#eee"/>
+                    </img>
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">
+                        <span style="font-weight: bold;">Step 3</span>
+                    </h2>
+                    <br>
+                    <p class="lead">모니터에 옆모습을 보여주세요</p>
+                </div>
+                <div class="col-md-5">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="350"
+                         th:src="@{/image/side.png}" xmlns="http://www.w3.org/2000/svg" role="img"
+                         aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>
+                        Placeholder</title>
+                    <rect width="100%" height="100%" fill="#eee"/>
+                    </img>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="margin-bottom:8%; margin-top: 10rem;">
+
+            <div class="text-center mb-5">
+                <h4 class="fw-bold">이제 모니터에 보이는 귀 방향에 따라 메뉴를 선택해주세요.</h4>
+            </div>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3">
+                <div class="col">
+                    <div class="text-center mb-4">
+                        <img th:src="@{/image/sideLeft.png}" width="250">
+                    </div>
+                    <a class="card shadow-sm" th:href="@{/video-diagnosis/video_turtleNeck_left}">
+                        <div class="text-center" style="margin-top:55px;margin-bottom:55px">
+                            <h5 style="font-weight:bold;margin-top:3%">왼쪽</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col">
+                    <div class="text-center mb-4">
+                        <img th:src="@{/image/sideRight.png}" width="250">
+                    </div>
+                    <a class="card shadow-sm" th:href="@{/video-diagnosis/video_turtleNeck_right}">
+                        <div class="text-center" style="margin-top:55px;margin-bottom:55px">
+                            <h5 style="font-weight:bold;margin-top:3%">오른쪽</h5>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</main>
+
+<!-- FOOTER -->
+<div th:replace="fragments/common :: bottom"></div>
+
+
+<!--<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
+<footer th:replace="fragments/common :: footer"></footer>
+
+</body>
+</html>

@@ -12,36 +12,36 @@
     <title th:text="${title}">DAILY</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" th:fragment="menu(menu)">
-            <a href="#" th:href="@{/}" class="navbar-brand"><img th:src="@{/image/mainLogo.png}" style="padding-left: 2rem; width: 10rem;"></a>
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top" th:fragment="menu(menu)">
+    <a href="#" th:href="@{/}" class="navbar-brand"><img th:src="@{/image/mainLogo.png}" style="padding-left: 2rem; width: 10rem;"></a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav mr-auto col-md-10 justify-content-end nav_ul">
-                    <li class="nav-item" th:classappend="${menu} == 'video' ? 'active'">
-                        <a class="nav-link" href="#">영상진단 <span class="visually-hidden" th:if="${menu} == 'video'">(current)</span> </a>
-                    </li>
-                    <li class="nav-item" th:classappend="${menu} == 'self' ? 'active'">
-                        <a class="nav-link" href="#" th:href="@{/self/index}">자가진단 <span class="visually-hidden" th:if="${menu} == 'self'">(current)</span></a>
-                    </li>
-                    <li class="nav-item" th:classappend="${menu} == 'disease'? 'active'">
-                        <a class="nav-link" href="#" th:href="@{/disease/index}">질환 <span class="visually-hidden" th:if="${menu} == 'disease'">(current)</span></a>
-                    </li>
-                    <li class="nav-item" th:classappend="${menu} == 'stretch' ? 'active'">
-                        <a class="nav-link" href="#">스트레칭 <span class="visually-hidden" th:if="${menu} == 'stretch'">(current)</span></a>
-                    </li>
-                    <li class="nav-item" th:classappend="${menu} == 'board' ? 'active'">
-                        <a class="nav-link" href="#" th:href="@{/board/list}">게시판 <span class="visually-hidden" th:if="${menu} == 'board'">(current)</span></a>
-                    </li>
-                </ul>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto col-md-10 justify-content-end nav_ul">
+            <li class="nav-item" th:classappend="${menu} == 'video' ? 'active'">
+                <a class="nav-link" href="#" th:href="@{/video-diagnosis/index}">영상진단 <span class="visually-hidden" th:if="${menu} == 'video'">(current)</span> </a>
+            </li>
+            <li class="nav-item" th:classappend="${menu} == 'self' ? 'active'">
+                <a class="nav-link" href="#" th:href="@{/self/index}">자가진단 <span class="visually-hidden" th:if="${menu} == 'self'">(current)</span></a>
+            </li>
+            <li class="nav-item" th:classappend="${menu} == 'disease'? 'active'">
+                <a class="nav-link" href="#" th:href="@{/disease/index}">질환 <span class="visually-hidden" th:if="${menu} == 'disease'">(current)</span></a>
+            </li>
+            <li class="nav-item" th:classappend="${menu} == 'stretch' ? 'active'">
+                <a class="nav-link" href="#" th:href="@{/stretch/index}">스트레칭 <span class="visually-hidden" th:if="${menu} == 'stretch'">(current)</span></a>
+            </li>
+            <li class="nav-item" th:classappend="${menu} == 'board' ? 'active'">
+                <a class="nav-link" href="#" th:href="@{/board/list}">게시판 <span class="visually-hidden" th:if="${menu} == 'board'">(current)</span></a>
+            </li>
+        </ul>
 
-                <a class="btn btn-outline-primary col-md-1 mx-5" type="button" href="account/login.html"
-                   th:href="@{/account/login}">로그인</a>
-            </div>
-    </nav>
+        <a class="btn btn-outline-primary col-md-1 mx-5" type="button" href="account/login.html"
+           th:href="@{/account/login}">로그인</a>
+    </div>
+</nav>
 
 <div th:fragment="bottom" style="background-color: #DDEDFC; height:150px; margin-top: -50px; margin-bottom: -100px;">
     <div class="container">
@@ -70,7 +70,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
             integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
             crossorigin="anonymous"></script>
-<!--    <script type="text/javascript" src="/js/bootstrap.js"></script>-->
+    <!--    <script type="text/javascript" src="/js/bootstrap.js"></script>-->
 </footer>
 </body>
 
