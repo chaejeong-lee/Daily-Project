@@ -100,14 +100,14 @@ function checkNeck25(pose) {
     leftShoulder = pose.keypoints[5].position;
     leftEar = pose.keypoints[3].position;
 
-    return leftEar.x - leftShoulder.x > 25 && leftEar.x - leftShoulder.x < 50;
+    return Math.abs(leftEar.x - leftShoulder.x) > 25 && Math.abs(leftEar.x - leftShoulder.x) < 50;
 }
 
 function checkNeck50(pose) {
     leftShoulder = pose.keypoints[5].position;
     leftEar = pose.keypoints[3].position;
 
-    return leftEar.x - leftShoulder.x >= 50;
+    return Math.abs(leftEar.x - leftShoulder.x) >= 50;
 }
 
 /* PoseNet을 쓰면서 사용하는 함수들 코드 - 그냥 복사해서 쓰기 */
