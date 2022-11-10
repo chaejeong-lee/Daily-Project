@@ -1,0 +1,63 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head th:replace="fragments/common :: head('게시판')"></head>
+
+<body style="overflow-x: hidden;">
+
+    <nav th:replace="fragments/common :: menu('board')">
+
+    </nav>
+
+    <div class="container" style="margin-top: 10%; margin-bottom: 10%;">
+        <h2>게시판</h2><br>
+        <form action="#" th:action="@{/board/form}" th:object="${board}" method="post">
+            <div sec:authorize="!hasRole('ROLE_ADMIN')">
+                <label for="title">제목</label>
+                <input type="text" class="form-control mb-4" th:field="*{title}" disabled>
+
+
+                <label for="content">내용</label>
+                <textarea class="form-control" rows="10" th:field="*{content}" disabled></textarea>
+            </div>
+
+<!--            <div sec:authorize="hasRole('ROLE_ADMIN')">-->
+<!--                <input type="hidden" th:field="*{id}">-->
+<!--                <div class="form-group">-->
+<!--                    <label for="title">제목</label>-->
+<!--                    <input type="text" class="form-control"-->
+<!--                           th:classappend="${#fields.hasErrors('title')} ? 'is-invalid'" id="title" th:field="*{title}">-->
+<!--                    <div class="invalid-feedback" th:if="${#fields.hasErrors('title')}" th:errors="*{title}">-->
+<!--                        제목 에러 메시지-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="form-group">-->
+<!--                    <label for="content">내용</label>-->
+<!--                    <textarea class="form-control" id="content" rows="10" th:field="*{content}"-->
+<!--                              th:classappend="${#fields.hasErrors('content')} ? 'is-invalid'"></textarea>-->
+<!--                    <div class="invalid-feedback" th:if="${#fields.hasErrors('content')}" th:errors="*{content}">-->
+<!--                        내용 에러 메시지-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="text-right">-->
+<!--                <a type="button" class="btn btn-primary" th:href="@{/board/list}" sec:authorize="hasRole('ROLE_ADMIN')">취소</a>-->
+                <a type="button" class="btn btn-primary mt-2" th:href="@{/board/list}" sec:authorize="!hasRole('ROLE_ADMIN')">목록으로</a>
+<!--                <button type="button" class="btn btn-primary"-->
+<!--                        sec:authorize="hasRole('ROLE_ADMIN')" th:onclick="|deleteBoard(*{id})|">삭제</button>-->
+<!--                <button type="submit" class="btn btn-primary" sec:authorize="hasRole('ROLE_ADMIN')">확인</button>-->
+<!--            </div>-->
+        </form>
+    </div>
+
+
+<br><br><br><br>
+
+<!-- 푸터 설명 -->
+<div th:replace="fragments/common :: bottom"></div>
+
+<!-- jQuery, Popper.js, and Bootstrap JS -->
+<footer th:replace="fragments/common :: footer"></footer>
+</body>
+
+</html>

@@ -5,23 +5,23 @@
 
 <body style="overflow-x: hidden;">
 
-    <nav th:replace="fragments/common :: menu('board')">
+<nav th:replace="fragments/common :: menu('board')">
 
-    </nav>
+</nav>
 
 
 
 <!-- 공지사항 -->
-<p style="text-align: center; font-size: 200%; font-weight: bold; margin-top: 10rem; margin-bottom: 5rem;">공지사항</p>
-<div class="main_notice">
-    <form class="form-inline d-flex justify-content-end notice_form" method="GET" th:action="@{/board/list}">
+<p style="text-align: center; font-size: 200%; font-weight: bold; margin-top: 10rem; margin-bottom: 5rem;">게시판</p>
+<div class="main_notice container">
+    <form class="form-inline d-flex justify-content-end" method="GET" th:action="@{/board/list}">
         <div class="form-group mx-sm-2 mb-2">
-            <label for="searchText" class="sr-only">검색</label>
+            <!--            <label for="searchText" class="sr-only">검색</label>-->
             <input type="text" class="form-control" id="searchText" name="searchText" th:value="${param.searchText}">
         </div>
         <button type="submit" class="btn btn-secondary mb-2">검색</button>
     </form>
-    <table class="table table-hover" style="width: 70%; margin: 2% auto;" >
+    <table class="table table-hover" style="margin: 2% auto;" >
         <tbody>
         <tr style="border: none;" th:each="board, i : ${boards}">
             <td class="notice_td">
@@ -35,28 +35,28 @@
         </tbody>
     </table>
 
-    <div class="text-right div_write">
+    <div class="d-flex justify-content-end">
         <a type="button" class="btn btn-secondary" th:href="@{/board/form}"
            sec:authorize="hasRole('ROLE_USER')">쓰기</a>
     </div>
 
-<!--    <nav aria-label="Page navigation example" style="margin: 0 auto; margin-top: 5%;">-->
-<!--        <ul class="pagination justify-content-center">-->
-<!--            <li class="page-item" th:classappend="${1 == boards.pageable.pageNumber + 1} ? 'disabled'">-->
-<!--                <a class="page-link" href="#" th:href="@{/board/list(page=${boards.pageable.pageNumber - 1},searchText=${param.searchText})}"-->
-<!--                   tabindex="-1" aria-disabled="true"><</a>-->
-<!--            </li>-->
-<!--            <li class="page-item" th:classappend="${i == boards.pageable.pageNumber + 1} ? 'disabled'"-->
-<!--                th:each="i: ${#numbers.sequence(startPage, endPage)}">-->
-<!--                <a class="page-link" href="#" th:href="@{/board/list(page=${i - 1},searchText=${param.searchText})}" th:text="${i}">1</a>-->
-<!--            </li>-->
-<!--            <li class="page-item"-->
-<!--                th:classappend="${boards.totalPages == boards.pageable.pageNumber + 1} ? 'disabled'">-->
-<!--                <a class="page-link" href="#"-->
-<!--                   th:href="@{/board/list(page=${boards.pageable.pageNumber + 1},searchText=${param.searchText})}">></a>-->
-<!--            </li>-->
-<!--        </ul>-->
-<!--    </nav>-->
+    <nav aria-label="Page navigation example" style="margin: 0 auto; margin-top: 5%;">
+        <ul class="pagination justify-content-center">
+            <li class="page-item" th:classappend="${1 == boards.pageable.pageNumber + 1} ? 'disabled'">
+                <a class="page-link" href="#" th:href="@{/board/list(page=${boards.pageable.pageNumber - 1},searchText=${param.searchText})}"
+                   tabindex="-1" aria-disabled="true"><</a>
+            </li>
+            <li class="page-item" th:classappend="${i == boards.pageable.pageNumber + 1} ? 'disabled'"
+                th:each="i: ${#numbers.sequence(startPage, endPage)}">
+                <a class="page-link" href="#" th:href="@{/board/list(page=${i - 1},searchText=${param.searchText})}" th:text="${i}">1</a>
+            </li>
+            <li class="page-item"
+                th:classappend="${boards.totalPages == boards.pageable.pageNumber + 1} ? 'disabled'">
+                <a class="page-link" href="#"
+                   th:href="@{/board/list(page=${boards.pageable.pageNumber + 1},searchText=${param.searchText})}">></a>
+            </li>
+        </ul>
+    </nav>
 
 </div>
 
