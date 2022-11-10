@@ -17,7 +17,7 @@
       <table class="table table-hover">
         <tbody>
         <tr th:each="survey, i : ${surveys}">
-          <input type="checkbox">
+          <input type="checkbox" name="chk_cnt">
           <p th:text="${survey.question}">질문</p>
         </tr>
         </tbody>
@@ -26,7 +26,7 @@
   </div>
 
   <div style="margin-bottom:1%;text-align:center">
-    <a class="btn btn-outline-primary col-md-1 mx-5" style="width:300px" type="button">손목 터널 증후군 진단 결과 확인</a>
+    <a class="btn btn-outline-primary col-md-1 mx-5" style="width:300px" type="button" th:onclick="|goCheck()|">손목 터널 증후군 진단 결과 확인</a>
   </div>
 
   <div style="margin-bottom:10%;text-align:center" >
@@ -43,6 +43,31 @@
 
 <!--<script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
 <footer th:replace="fragments/common :: footer"></footer>
+
+<script>
+    function goCheck(){
+        var chk = $('input[name="chk_cnt"]');
+        if(chk.length==0){
+            return;
+        }
+        var cnt= 0;
+        $.each(chk, function(idx, ch){
+            if($(ch).is(":checked"))
+                cnt++;
+        });
+
+
+        if(cnt>=2){
+            alert("손목 터널 증후군이 의심됩니다. 진단을 받아보시는 것을 추천드립니다.");
+            return;
+        }
+        else
+        {
+            alert("이상이 없습니다.");
+            return;
+        }
+    }
+</script>
 
 </body>
 </html>
