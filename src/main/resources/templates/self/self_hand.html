@@ -9,10 +9,22 @@
 
 
 <main>
-
-  <div style="margin:5% auto;text-align:center" >
-    <img th:src="@{/image/self_hand.png}"width="600">
+  <div class="jb-wrap">
+    <div class="jb-image text-center mt-5">
+      <img th:src="@{/image/self_hand.png}" width="700">
+    </div>
+    <div class="jb-text">
+      <table class="table table-hover">
+        <tbody>
+        <tr th:each="survey, i : ${surveys}">
+          <input type="checkbox">
+          <p th:text="${survey.question}">질문</p>
+        </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
+
   <div style="margin-bottom:10%;text-align:center" >
     <a class="btn btn-outline-primary col-md-1 mx-5" style="width:300px" type="button" href="#"
        th:href="@{/disease/disease_hand}">손목 터널 증후군 상세설명으로 이동</a>

@@ -1,12 +1,8 @@
 <!doctype html>
 <html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/common :: head('거북목 영상진단')"></head>
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-    <title>거북목 영상진단</title>
-
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet@2.2.2/dist/posenet.min.js"></script>
 
@@ -17,28 +13,37 @@
             /* 이미지에 캔버스를 겹쳐서 그리기 위함 */
             canvas {
                 position: absolute;
-                transform: translate(-50%, -30%);
-                top: 50%;
-                left: 50%;
+                left: 30%;
             }
 
             video {
                 position: absolute;
-                transform: translate(-50%, -30%);
-                top: 50%;
-                left: 50%;
+                left: 30%;
             }
+
+
 
     </style>
 </head>
 
 <body>
-<h1>거북목 영상진단(왼쪽)</h1>
-<h1 id="result_label">진단을 진행하고 있습니다.(약 10초 소요)</h1>
-<p>다시 검사, 뒤로 가기 등 버튼 추가하기</p>
-<div>
-    <video id="video" width="550" height="350" autoplay muted playsinline></video>
-    <canvas id="canvas"></canvas>
+
+<nav th:replace="fragments/common :: menu('video')"></nav>
+
+<br><br>
+
+<h1 class="pb-2 fw-bold text-center">거북목 영상진단(왼쪽)</h1>
+
+<div class="container">
+    <div class="mt-4">
+        <h3 id="result_label">진단을 진행하고 있습니다.(약 10초 소요)</h3>
+        <a class="btn btn-outline-primary float-end" type="button" th:href="@{/video-diagnosis/video_turtleNeck_left}">다시
+            검사하기</a>
+    </div>
+    <div class="mb-5" style="margin-top: 5rem;">
+        <video id="video" width="900px" height="500px" autoplay muted playsinline></video>
+        <canvas id="canvas"></canvas>
+    </div>
 </div>
 
 <script th:src="@{/javascript/turtleNeck_left.js}"></script>
