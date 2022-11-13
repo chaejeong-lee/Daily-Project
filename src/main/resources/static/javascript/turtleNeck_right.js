@@ -70,20 +70,29 @@ let count_time = setInterval(function () {
     } else {
         if (pose_status != 2 && keep_time[pose_status] == 10) {
             if (pose_status == 0) {
+                alert('거북목이 진행 중');
                 result_message = "거북목이 진행 중";
+                keep_time[0] = keep_time[1] = keep_time[2] = 0;
             } else {
+                alert('거북목 심각 상태');
                 result_message = "거북목 심각 상태";
+                keep_time[0] = keep_time[1] = keep_time[2] = 0;
             }
-            clearInterval(count_time);
+            //clearInterval(count_time);
             window.parent.postMessage(result_message, "*");
+            let interval = setInterval(count_time, 30000);
         } else if (pose_status == 2 && keep_time[pose_status] == 10) {
+            alert('정상');
             result_message = "정상";
-            clearInterval(count_time);
+            keep_time[0] = keep_time[1] = keep_time[2] = 0;
+            //clearInterval(count_time);
             window.parent.postMessage(result_message, "*");
+            let interval = setInterval(count_time, 30000);
         }
         keep_time[pose_status]++; //시간은 항상 세고 있다.
     }
-}, 1000);
+}, 1000);//1초마다
+
 
 function checkPose(pose, spine) {
     if(checkNeck25(pose)) {
