@@ -21,7 +21,7 @@ public class User {
     private String userid;
 
     @NotBlank(message = "비밀번호를 입력해주세요.")
-    private String password;
+    private String password1;
     @Size(min = 2, max = 8)
     private String username;
     @Email(message = "이메일 형식이 올바르지 않습니다.")

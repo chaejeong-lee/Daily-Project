@@ -14,29 +14,36 @@
 <body class="text-center">
 
 <main class="form-signin w-auto m-auto">
-    <form>
+    <form th:action="@{/account/login}" >
         <a th:href="@{/}"><img class="mb-4" th:src="@{/image/mainLogo.png}" alt="" width="150"></a>
-        <h1 class="h5 mb-4 fw-normal">로그인</h1>
+        <h1 class="h5 mb-4 fw-normal" >로그인</h1>
 
-        <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">ID</label>
-        </div>
-        <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
+        <div th:if="${param.error}">
+            <div class="alert alert-danger">
+                사용자ID 또는 비밀번호를 확인해 주세요.
+            </div>
         </div>
 
-<!--        <div class="checkbox mb-3">-->
-<!--            <label>-->
-<!--                <input type="checkbox" value="remember-me"> Remember me-->
-<!--            </label>-->
-<!--        </div>-->
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="userid" placeholder="id">
+            <label for="userid">ID</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="password" placeholder="Password">
+            <label for="password">Password</label>
+        </div>
+
+        <!--        <div class="checkbox mb-3">-->
+        <!--            <label>-->
+        <!--                <input type="checkbox" value="remember-me"> Remember me-->
+        <!--            </label>-->
+        <!--        </div>-->
         <button class="w-100 mb-3 mt-2 btn btn-lg btn-outline-primary" type="submit">로그인</button>
         <div class="caption text-secondary">
             <a href="#" th:href="@{/account/signup}">회원가입 </a>|
-            <a href="#" th:href="@{/account/findID}">아이디 찾기 </a>|
-            <a href="#" th:href="@{/account/findPW}">비밀번호 찾기</a>
+            <a href="#">아이디 찾기 </a>|
+            <a href="#">비밀번호 찾기</a>
         </div>
     </form>
 </main>
