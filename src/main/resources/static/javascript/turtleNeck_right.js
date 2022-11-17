@@ -70,22 +70,18 @@ let count_time = setInterval(function () {
     } else {
         if (pose_status != 2 && keep_time[pose_status] == 10) {
             if (pose_status == 0) {
-                alert('거북목이 진행 중');
-                result_message = "거북목이 진행 중";
+                result_message = "목이 조금 내려왔습니다. 자세를 교정하여 앉아 주세요.";
                 keep_time[0] = keep_time[1] = keep_time[2] = 0;
             } else {
-                alert('거북목 심각 상태');
-                result_message = "거북목 심각 상태";
+                result_message = "자세가 너무 좋지 않습니다. 바로 앉아주세요.";
                 keep_time[0] = keep_time[1] = keep_time[2] = 0;
             }
-            //clearInterval(count_time);
+            speech(result_message);
             window.parent.postMessage(result_message, "*");
             let interval = setInterval(count_time, 30000);
         } else if (pose_status == 2 && keep_time[pose_status] == 10) {
-            alert('정상');
             result_message = "정상";
             keep_time[0] = keep_time[1] = keep_time[2] = 0;
-            //clearInterval(count_time);
             window.parent.postMessage(result_message, "*");
             let interval = setInterval(count_time, 30000);
         }
@@ -174,3 +170,44 @@ function drawBoundingBox(keypoints, ctx) {
     ctx.strokeStyle = boundingBoxColor;
     ctx.stroke();
 }
+
+//tts 음성지원
+ var voices = [];
+
+ function setVoiceList() {
+     voices = window.speechSynthesis.getVoices();
+ }
+ setVoiceList();
+ if (window.speechSynthesis.onvoiceschanged !== undefined) {
+     window.speechSynthesis.onvoiceschanged = setVoiceList;
+ }
+
+ function speech(txt) {
+     if (!window.speechSynthesis) {
+         alert("음성 재생을 지원하지 않는 브라우저입니다. 크롬, 파이어폭스 등의 최신 브라우저를 이용하세요");
+         return;
+     }
+     var lang = 'ko-KR';
+     var utterThis = new SpeechSynthesisUtterance(txt);
+     utterThis.onend = function (event) {
+         console.log('end');
+     };
+     utterThis.onerror = function (event) {
+         console.log('error', event);
+     };
+     var voiceFound = false;
+     for (var i = 0; i < voices.length; i++) {
+         if (voices[i].lang.indexOf(lang) >= 0 || voices[i].lang.indexOf(lang.replace('-', '_')) >= 0) {
+             utterThis.voice = voices[i];
+             voiceFound = true;
+         }
+     }
+     if (!voiceFound) {
+         alert('voice not found');
+         return;
+     }
+     utterThis.lang = lang;
+     utterThis.pitch = 1;
+     utterThis.rate = 1; //속도
+     window.speechSynthesis.speak(utterThis);
+ }
