@@ -26,11 +26,11 @@
 
 
         <div class="form-floating">
-            <input type="text" class="form-control" id="userid" placeholder="id">
-            <label for="userid">ID</label>
+            <input type="text" th:field="*{userid}" class="form-control" id="id" placeholder="ID">
+            <label for="id">ID</label>
         </div>
         <div class="form-floating">
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input type="password" th:field="*{password}"  class="form-control" id="password" placeholder="Password">
             <label for="password">Password</label>
         </div>
 
@@ -42,8 +42,8 @@
         <button class="w-100 mb-3 mt-2 btn btn-lg btn-outline-primary" type="submit">로그인</button>
         <div class="caption text-secondary">
             <a href="#" th:href="@{/account/signup}">회원가입 </a>|
-            <a href="#">아이디 찾기 </a>|
-            <a href="#">비밀번호 찾기</a>
+            <a href="#" th:href="@{/account/findID">아이디 찾기 </a>|
+            <a href="#" th:href="@{/account/findPW">비밀번호 찾기</a>
         </div>
     </form>
 </main>

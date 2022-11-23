@@ -83,7 +83,7 @@ let count_time = setInterval(function () {
             result_message = "정상";
             keep_time[0] = keep_time[1] = keep_time[2] = 0;
             window.parent.postMessage(result_message, "*");
-            let interval = setInterval(count_time, 30000);
+            let interval = setInterval(count_time, 3000);
         }
         keep_time[pose_status]++; //시간은 항상 세고 있다.
     }

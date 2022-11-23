@@ -26,11 +26,11 @@
         <button class="w-50 mb-3 mt-2 btn btn-sm btn-primary" type="submit">중복 확인</button>
 
         <div class="form-floating">
-            <input type="password" th:field="*{password1}" class="form-control" placeholder="Password">
+            <input type="password" th:field="*{password1}" class="form-control" id="password1" placeholder="Password">
             <label for="password1">Password</label>
         </div>
         <div class="form-floating">
-            <input type="password" th:field="*{password2}"class="form-control" placeholder="Password">
+            <input type="password" th:field="*{password2}" class="form-control" id="password2" placeholder="Password">
             <label for="password2">비밀번호 확인</label>
         </div>
         <div class="form-floating" >
@@ -42,8 +42,8 @@
         <button class="w-100 mb-3 mt-2 btn btn-lg btn-outline-primary" type="submit">회원가입</button>
         <div class="caption text-secondary">
             <a href="#" th:href="@{/account/login}">로그인 </a>|
-            <a href="#">아이디 찾기 </a>|
-            <a href="#">비밀번호 찾기</a>
+            <a href="#" th:href="@{/account/findID}">아이디 찾기 </a>|
+            <a href="#" th:href="@{/account/findPW">비밀번호 찾기</a>
         </div>
     </form>
 </main>

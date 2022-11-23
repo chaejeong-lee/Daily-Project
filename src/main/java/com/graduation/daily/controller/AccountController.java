@@ -19,7 +19,7 @@ public class AccountController {
     private final UserService userService;
 
     @GetMapping("/login")
-    public String login() {
+    public String login() {//접근 요청 HttpSession session
         return "account/login";
     }
 
