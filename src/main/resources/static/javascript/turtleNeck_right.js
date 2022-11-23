@@ -78,7 +78,7 @@ let count_time = setInterval(function () {
             }
             speech(result_message);
             window.parent.postMessage(result_message, "*");
-            let interval = setInterval(count_time, 30000);
+            let interval = setInterval(count_time, 3000);
         } else if (pose_status == 2 && keep_time[pose_status] == 10) {
             result_message = "정상";
             keep_time[0] = keep_time[1] = keep_time[2] = 0;
