@@ -70,10 +70,10 @@ let count_time = setInterval(function () {
     } else {
         if (pose_status != 2 && keep_time[pose_status] == 10) {
             if (pose_status == 0) {
-                result_message = "목이 조금 내려왔습니다. 자세를 교정하여 앉아 주세요.";
+                result_message = "자세가 너무 좋지 않습니다. 바로 앉아주세요.";
                 keep_time[0] = keep_time[1] = keep_time[2] = 0;
             } else {
-                result_message = "자세가 너무 좋지 않습니다. 바로 앉아주세요.";
+                result_message = "목이 조금 내려왔습니다. 자세를 교정하여 앉아 주세요.";
                 keep_time[0] = keep_time[1] = keep_time[2] = 0;
             }
             speech(result_message);
